@@ -1,4 +1,5 @@
 import React from 'react';
+
 import useDarkmode from '../hooks/useDarkmode';
 import PlayerCard from './PlayerCard';
 
@@ -9,9 +10,9 @@ import PlayerCard from './PlayerCard';
         return (
             <div style= {{
                     background: theme === 'dark' ? '#00021c' : '#fff',
-                    color: theme === 'dark' ? '#fff' : '#00021c',
+                    color: theme === 'dark' ? '#fff' : '#00021c'
             }}>
-                <h1>Womens Soccer Players</h1>
+                <h1>2019 Women’s World Cup Player Searches</h1>
                 <button type='button' onClick={switchTheme}> Toggle Dark Mode </button>
                 <section>
                     {player.map(players => (
@@ -23,4 +24,3 @@ import PlayerCard from './PlayerCard';
     }
 
 export default Darkmode;
-

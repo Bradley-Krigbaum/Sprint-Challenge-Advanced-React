@@ -4,20 +4,20 @@ import Darkmode from './components/Darkmode';
 
 class App extends React.Component {
 
-  state = {
-    players: []
-  };
+    state = {
+        players: []
+    };
 
 
   componentDidMount() {
 
     console.log("bk: App.js: CDU: component mounted");
     fetch("http://localhost:5000/api/players")
-      .then(res => res.json())
-      .then(player => {
-        this.setState({ players: player });
-      })
-      .catch(err => console.error(err));
+        .then(res => res.json())
+        .then(player => {
+            this.setState({ players: player });
+        })
+        .catch(err => console.error(err));
 
   }
 
@@ -25,10 +25,10 @@ class App extends React.Component {
   componentDidUpdate(prevState) {
 
     console.log("bk: App.js: CDU: component updated");
-    if (prevState.users !== this.state.users) {
-      // console.log("bk: App.js: CDU: user state has changed");
-      // console.log('CDU: user state: ', this.state.users);
-      // console.log('CDU: user name: ', this.state.userName);
+    if (prevState.players !== this.state.players) {
+        // console.log("bk: App.js: CDU: user state has changed");
+        // console.log('CDU: user state: ', this.state.users);
+        // console.log('CDU: user name: ', this.state.userName);
     }
 
   }
@@ -37,7 +37,7 @@ class App extends React.Component {
   render() {
 
     return (
-      <Darkmode player={this.state.players}/>
+        <Darkmode player={this.state.players}/>
     );
 
   }
