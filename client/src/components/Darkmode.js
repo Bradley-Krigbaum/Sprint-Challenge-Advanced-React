@@ -7,24 +7,18 @@ import PlayerCard from './PlayerCard';
         const [ theme, switchTheme ] = useDarkmode();
 
         return (
-            <>
-                <div 
-                
-                style={{
+            <div style= {{
                     background: theme === 'dark' ? '#00021c' : '#fff',
                     color: theme === 'dark' ? '#fff' : '#00021c',
-                  }}
-
-                >
-                    <h1>Womens Soccer Players</h1>
-                    <button type='button' onClick={switchTheme}> Toggle Dark Mode </button>
-                    <section>
-                        {player.map(players => (
-                            <PlayerCard players={players}/>
-                        ))}
-                    </section>
-                </div>
-            </>
+            }}>
+                <h1>Womens Soccer Players</h1>
+                <button type='button' onClick={switchTheme}> Toggle Dark Mode </button>
+                <section>
+                    {player.map(players => (
+                        <PlayerCard players={players} key={players.id}/>
+                    ))}
+                </section>
+            </div>
         )
     }
 

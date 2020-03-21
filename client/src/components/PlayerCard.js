@@ -4,13 +4,13 @@ function PlayerCard(props) {
 
     return (
         <>
-            {console.log('bk: PlayerCard.js: PlayerCard: props: ', props.players)}
+            {/* {console.log('bk: PlayerCard.js: PlayerCard: props: ', props.players)} */}
 
-            <div key={props.players.id}>
+            <div>
                 <h2>{props.players.name}</h2>
                 <div>
                     <ul>
-                        <li>Country: {props.players.name}</li>
+                        <li>Country: {props.players.country}</li>
                         <li>Searches: {props.players.searches}</li>
                     </ul>
                     
