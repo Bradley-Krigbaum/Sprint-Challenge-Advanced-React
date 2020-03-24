@@ -14,7 +14,7 @@ import PlayerCard from './PlayerCard';
             }}>
                 <h1>2019 Women’s World Cup Player Searches</h1>
                 <button type='button' onClick={switchTheme}> Toggle Dark Mode </button>
-                <section>
+                <section data-testid='playerSection' >
                     {player.map(players => (
                         <PlayerCard players={players} key={players.id}/>
                     ))}
